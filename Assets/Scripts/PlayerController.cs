@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -9,9 +10,36 @@ public class PlayerController : MonoBehaviour
     public float walkSpeed = 5f;
     Vector2 moveInput;
 
-    public bool IsMoving { get; private set; }
+    [SerializeField]
+    private bool _isMoving = false;
+    public bool IsMoving { get
+        {
+            return _isMoving;
+        }
+        private set
+        {
+            _isMoving = value;
+            animator.SetBool("isMoving", value);
+        }
+    }
+    [SerializeField]
+    private bool _isRunning = false;
+    private bool IsRunning
+    {
+        get
+        {
+            return _isRunning;
+        }
+        set
+        {
+            _isRunning = value;
+            animator.SetBool("isRunning", value);
+        }
+    }
 
     Rigidbody2D rb;
+    Animator animator; 
+
 
     private void Awake()
     {
@@ -27,7 +55,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Assert.IsNotNull(rb);
+        //nullpointerexception on the input
     }
 
     private void FixedUpdate()
@@ -41,5 +70,18 @@ public class PlayerController : MonoBehaviour
 
         IsMoving = moveInput != Vector2.zero;
 
+    }
+    
+    public void OnRun(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            IsRunning = true;
+
+        }
+        else if (context.canceled)
+        {
+            IsRunning = false;
+        }
     }
 }

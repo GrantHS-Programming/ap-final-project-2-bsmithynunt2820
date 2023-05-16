@@ -796,17 +796,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2868598445207884080, guid: bab115cf74308e14a8d6de0058bec962, type: 3}
   m_PrefabInstance: {fileID: 2868598443895965885}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1920129423 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6563646811284744968, guid: bab115cf74308e14a8d6de0058bec962, type: 3}
-  m_PrefabInstance: {fileID: 2868598443895965885}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcee64814e8f1724ab116d9016f75ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2137536071
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,29 +947,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2868598445207884086, guid: bab115cf74308e14a8d6de0058bec962, type: 3}
+      propertyPath: m_Constraints
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2868598445207884087, guid: bab115cf74308e14a8d6de0058bec962, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7298407872037305805, guid: bab115cf74308e14a8d6de0058bec962, type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7298407872037305805, guid: bab115cf74308e14a8d6de0058bec962, type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1920129423}
-    - target: {fileID: 7298407872037305805, guid: bab115cf74308e14a8d6de0058bec962, type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnMove
-      objectReference: {fileID: 0}
-    - target: {fileID: 7298407872037305805, guid: bab115cf74308e14a8d6de0058bec962, type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7298407872037305805, guid: bab115cf74308e14a8d6de0058bec962, type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
