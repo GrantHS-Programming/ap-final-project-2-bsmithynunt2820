@@ -7,8 +7,32 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
+    Animator animator;
+    Rigidbody2D rb;
+    private currentMoveSpeed controls;
     public float walkSpeed = 5f;
+    public float runSpeed = 8f;
     Vector2 moveInput;
+
+    public float currentMoveSpeed {get
+        {
+            if (IsMoving)
+            {
+                if (IsRunning)
+                {
+                    return runSpeed;
+
+                }
+                else
+                {
+                    return walkSpeed;
+                }
+            }
+            else
+            {
+                return 0; 
+            }
+        } }
 
     [SerializeField]
     private bool _isMoving = false;
@@ -37,8 +61,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    Rigidbody2D rb;
-    Animator animator; 
+    
 
 
     private void Awake()
@@ -56,12 +79,12 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Assert.IsNotNull(rb);
-        //nullpointerexception on the input
+       // Assert.IsNotNull();
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveInput.x*walkSpeed,rb.velocity.y);
+        rb.velocity = new Vector2(moveInput.x*currentMoveSpeed,rb.velocity.y);
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -78,10 +101,9 @@ public class PlayerController : MonoBehaviour
         {
             IsRunning = true;
 
-        }
-        else if (context.canceled)
+        } else if (context.canceled)
         {
             IsRunning = false;
         }
-    }
+    } 
 }

@@ -949,11 +949,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2868598445207884086, guid: bab115cf74308e14a8d6de0058bec962, type: 3}
       propertyPath: m_Constraints
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2868598445207884087, guid: bab115cf74308e14a8d6de0058bec962, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7298407872037305805, guid: bab115cf74308e14a8d6de0058bec962, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
