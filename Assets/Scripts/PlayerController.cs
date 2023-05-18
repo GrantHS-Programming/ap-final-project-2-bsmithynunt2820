@@ -78,8 +78,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Assert.IsNotNull(rb);
-       // Assert.IsNotNull();
+      
     }
 
     private void FixedUpdate()
