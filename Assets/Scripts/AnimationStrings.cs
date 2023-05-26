@@ -10,5 +10,7 @@ public class AnimationStrings
     internal static string isRunning = "isRunning";
     internal static string isGrounded = "isGrounded";
     internal static string yVelocity = "yVelocity";
-    internal static string jump = "jump";
+    internal static string jumpTrigger = "jump";
+    internal static string attackTrigger = "attack";
+    internal static string canMove = "canMove";
 }
